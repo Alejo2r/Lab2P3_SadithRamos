@@ -81,6 +81,7 @@ void graficarArreglo(float arreglo[], int size) {
 int main(){
     int op;
     float temporal = 0;
+    float arreglo[4] = { 0,0,0,0 };
     do {
         cout << "1. Ejercicio #1" << endl;
         cout << "2. Ejercicio #2" << endl;
@@ -99,7 +100,7 @@ int main(){
                 cin >> opc;
 
                 switch (opc) {
-                    float arreglo[4];
+                  
                 case 1:
                     for (int indice = 0; indice < 4; indice++){
                         cout << "Ingrese el tiempo: ";
@@ -108,7 +109,7 @@ int main(){
                     cout << "Tiempos registrados!" << endl;
                     break;
                 case 2:
-                    if (arreglo == 0) {
+                    if (arreglo[0] == 0) {
                         cout << "Registra tus tiempos antes!" << endl;
                     }
                     else {
@@ -116,7 +117,7 @@ int main(){
                     }
                     break;
                 case 3:
-                    if (arreglo == 0) {
+                    if (arreglo[0] == 0) {
                         cout << "Registra tus tiempos antes!" << endl;
                     }
                     else {
@@ -129,15 +130,15 @@ int main(){
         case 2:
             cout << endl;
             int num;
-            float arreglo[10];
+            float arreglo2[10];
             temporal = 0;
             for (int i = 0; i < 10; i++){
-                arreglo[i] = temporal + sqrt(i + 1) + pow(-1,i) * log(i+2);
-                temporal = arreglo[i];
+                arreglo2[i] = temporal + sqrt(i + 1) + pow(-1,i) * log(i+2);
+                temporal = arreglo2[i];
             }
             do{
                 for (int i = 0; i < 10; i++) {
-                    cout << arreglo[i] << endl;
+                    cout << arreglo2[i] << endl;
                 }
                 cout << "Menu Sumatoria" << endl;
                 cout << "1. Promedio    " << endl;
@@ -148,13 +149,13 @@ int main(){
 
                 switch (num) {
                 case 1:
-                    promedio(arreglo, 10);
+                    promedio(arreglo2, 10);
                     break;
                 case 2:
-                    mediana(arreglo, 10);
+                    mediana(arreglo2, 10);
                     break;
                 case 3:
-                   graficarArreglo(arreglo, 10);
+                   graficarArreglo(arreglo2, 10);
                     break;
                 }
             } while (num!=4);
